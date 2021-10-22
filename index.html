@@ -5,7 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="./assets/css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" href="./assets/css/main.min.css" />    
+    <script
+      src="https://kit.fontawesome.com/84a7fa5bea.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header class="navbar">
+        <h1>ohmyfood</h1>
+        <div class="location">
+          <a>
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Paris,Belleville</span>
+          </a>
+        </div>
+      </header>
+      <section class="description">
+        <h2>Réserver le menu qui vous convient</h2>
+        <p>
+          Découvrez des restaurants d'exception, séléctionnés par nos soins.
+        </p>
+        <button class="main-button">
+          <span>Explorer nos restaurants</span>
+        </button>
+      </section>
+      <section class="Fonctionnement">
+        <h2>Fonctionnement</h2>
+        <ul class="fonctionnement-list">
+          <li>
+            <span class="order-numbers">1</span>
+            <i class="fas fa-mobile-alt"></i>
+            <p>Choisissez un restaurant</p>
+          </li>
+          <li>
+            <span class="order-numbers">2</span>
+            <i class="fas fa-list-ul"></i>
+            <p>Composez votre menu</p>
+          </li>
+          <li>
+            <span class="order-numbers">3</span>
+            <i class="fas fa-store"></i>
+            <p>Dégustez au restaurant</p>
+          </li>
+        </ul>
+      </section>
+      <section class="Restaurants">
+        <h2>Restaurants</h2>
+        <div class="restaurant-card">
+          <img src="" alt=""></img>
+          <div class="card-text">
+            <p>La palette du goût Ménilmontant</p><i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="restaurant-card">
+          <img src="" alt=""></img>
+          <div class="card-text">
+            <p>La note enchantée</p><i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="restaurant-card">
+          <img src="" alt=""></img>
+          <div class="card-text">
+            <p> la française</p><i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="restaurant-card">
+          <img src="" alt=""></img>
+          <div class="card-text">
+            <p>Le délice des sens</p><i class="far fa-heart"></i>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <span>ohmyfood</span>
+        <ul>
+          <li><a><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+          <li><a><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+          <li><a>Mentions légales</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
