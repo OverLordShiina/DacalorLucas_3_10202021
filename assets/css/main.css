@@ -8,7 +8,7 @@ html body {
 /*font-family: "Roboto", sans-serif;*/
 h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 h2 {
@@ -33,7 +33,7 @@ h2 {
   position: absolute;
   top: 25px;
   left: 20px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -53,7 +53,7 @@ h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  background-color: grey;
+  background-color: lightgray;
   padding: 1rem;
 }
 
@@ -90,7 +90,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: lightgrey;
+  background-color: whitesmoke;
   height: 290px;
   padding: 2rem;
 }
@@ -148,7 +148,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   height: 70px;
-  background-color: lightgrey;
+  background-color: whitesmoke;
   border-radius: 25px;
 }
 
@@ -169,6 +169,10 @@ h2 {
   margin-left: -50px;
 }
 
+.fonctionnement__list-item i {
+  color: gray;
+}
+
 .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,7 +182,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1.5rem;
-  background-color: lightgrey;
+  background-color: whitesmoke;
   gap: 1rem;
 }
 
@@ -196,6 +200,7 @@ h2 {
   height: 255px;
   text-decoration: none;
   color: currentColor;
+  position: relative;
 }
 
 .restaurant-card img {
@@ -203,6 +208,17 @@ h2 {
      object-fit: cover;
   height: 175px;
   border-radius: 25px 25px 0 0;
+}
+
+.restaurant-card .new-badge {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+  color: #1b6150;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
 }
 
 .restaurant-card__text {
@@ -223,7 +239,7 @@ h2 {
   font-weight: bold;
 }
 
-.a-la-francaise {
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,11 +247,12 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: lightgray;
+  background-color: whitesmoke;
   padding: 20px;
   gap: 1rem;
   border-radius: 20px 20px 0 0;
   margin-top: -30px;
+  position: relative;
 }
 
 .menu-list {
@@ -246,10 +263,14 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 0.8rem;
 }
 
-.menu-list > p {
+.menu-list > p::after {
+  content: "";
+  display: block;
+  width: 40px;
+  margin-top: 5px;
   border-bottom: lightskyblue solid 3px;
 }
 
