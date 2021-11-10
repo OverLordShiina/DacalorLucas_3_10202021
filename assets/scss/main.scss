@@ -9,6 +9,9 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 /*font-family: "Shrikhand", cursive;*/
 /*font-family: "Roboto", sans-serif;*/
+@mixin box-shadow {
+  box-shadow: 0px 5px 15px lightgrey;
+}
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
@@ -79,25 +82,30 @@ h2 {
   font-weight: bold;
   padding: 1rem;
   cursor: pointer;
+  @include box-shadow;
 }
 .fonctionnement {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  gap: 1rem;
+  gap: 1.4rem;
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.4rem;
   }
   &__list-item {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     height: 70px;
     background-color: whitesmoke;
     border-radius: 25px;
-    span {
+    padding: 0 30px 0 40px;
+    gap: 1rem;
+    @include box-shadow;
+    .numbers {
+      position: absolute;
+      left: 0.75rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,10 +113,23 @@ h2 {
       width: 1.5rem;
       background-color: $color-primary;
       border-radius: 50%;
-      margin-left: -50px;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 1.5rem;
     }
     i {
+      font-size: 1.5rem;
       color: gray;
+    }
+    &:hover {
+      background-color: #9256dc2c;
+      i {
+        color: $color-primary;
+      }
     }
   }
 }
@@ -117,7 +138,7 @@ h2 {
   flex-direction: column;
   padding: 1.5rem;
   background-color: whitesmoke;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 .restaurant-card {
   display: flex;
@@ -129,6 +150,7 @@ h2 {
   text-decoration: none;
   color: currentColor;
   position: relative;
+  @include box-shadow;
   img {
     object-fit: cover;
     height: 175px;
@@ -146,12 +168,56 @@ h2 {
   }
   &__text {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    column-gap: 5rem;
+    align-items: center;
     padding: 1rem;
     span {
       font-weight: bold;
+    }
+    div:first-of-type {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 5px;
+    }
+    .favorite {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+    div > i {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      &:checked ~ .far {
+        transition-duration: 0.5s;
+        opacity: 0;
+      }
+      &:checked ~ .fas {
+        transition-duration: 0.5s;
+        opacity: 1;
+      }
+    }
+    .fas {
+      opacity: 0;
+      transition-duration: 0.5s;
+      background: linear-gradient(to bottom, $color-primary, $color-secondary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
   }
 }
@@ -189,6 +255,7 @@ h2 {
     background-color: white;
     padding: 0.8rem;
     gap: 0.3rem;
+    @include box-shadow;
     span {
       font-weight: bold;
     }
