@@ -335,11 +335,6 @@ h2 {
       margin-bottom: 0.8rem;
       margin-right: 0.8rem;
     }
-    p {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
     .selected {
       display: flex;
       justify-content: center;
@@ -348,6 +343,7 @@ h2 {
       width: 6rem;
       background: #99e2d0;
       margin-right: -6rem;
+      transition: 500ms;
       i {
         color: #99e2d0;
         border-radius: 50%;
@@ -368,11 +364,9 @@ h2 {
     input:checked ~ .selected {
       margin-left: -0.8rem;
       margin-right: 0;
-      transition: 500ms ease;
     }
     input:checked ~ .selected i {
       margin-right: 0;
-      transition: 500ms ease;
       transform: rotate(360deg);
     }
   }

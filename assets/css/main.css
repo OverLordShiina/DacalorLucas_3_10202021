@@ -549,12 +549,6 @@ h2 {
   margin-right: 0.8rem;
 }
 
-.menu-list__choix p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .menu-list__choix .selected {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -569,6 +563,8 @@ h2 {
   width: 6rem;
   background: #99e2d0;
   margin-right: -6rem;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .menu-list__choix .selected i {
@@ -595,14 +591,10 @@ h2 {
 .menu-list__choix input:checked ~ .selected {
   margin-left: -0.8rem;
   margin-right: 0;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
 }
 
 .menu-list__choix input:checked ~ .selected i {
   margin-right: 0;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
