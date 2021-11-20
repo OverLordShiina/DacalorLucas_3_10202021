@@ -181,6 +181,13 @@ h2 {
           box-shadow: 0px 5px 15px lightgrey;
 }
 
+.main-button:hover {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
+  background-image: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  -webkit-box-shadow: 0px 5px 15px gray;
+          box-shadow: 0px 5px 15px gray;
+}
+
 .fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,8 +297,6 @@ h2 {
   background-color: white;
   width: auto;
   height: 255px;
-  text-decoration: none;
-  color: currentColor;
   position: relative;
   -webkit-box-shadow: 0px 5px 15px lightgrey;
           box-shadow: 0px 5px 15px lightgrey;
@@ -346,7 +351,7 @@ h2 {
   gap: 5px;
 }
 
-.restaurant-card__text .favorite {
+.favorite {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,7 +366,39 @@ h2 {
   width: 1.5rem;
 }
 
-.restaurant-card__text div > i {
+.favorite .fas {
+  opacity: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.favorite input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.favorite input:checked ~ .far {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  opacity: 0;
+}
+
+.favorite input:checked ~ .fas {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  opacity: 1;
+}
+
+.favorite i {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,38 +410,6 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.5rem;
-}
-
-.restaurant-card__text input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-.restaurant-card__text input:checked ~ .far {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  opacity: 0;
-}
-
-.restaurant-card__text input:checked ~ .fas {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  opacity: 1;
-}
-
-.restaurant-card__text .fas {
-  opacity: 0;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .menu {
@@ -632,6 +637,11 @@ h2 {
 
 .commander span {
   margin: 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
 footer {
