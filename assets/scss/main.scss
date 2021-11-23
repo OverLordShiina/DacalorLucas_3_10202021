@@ -58,9 +58,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
     position: absolute;
-    top: 25px;
-    left: 20px;
+    top: 18px;
+    left: 2px;
     font-size: 1.5rem;
     color: black;
   }
@@ -81,6 +86,7 @@ h2 {
   }
   &--menu-image {
     height: 290px;
+    width: 100%;
     img {
       width: 100%;
       height: 290px;
@@ -113,9 +119,11 @@ h2 {
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  padding: 1rem;
   cursor: pointer;
   @include box-shadow;
+  span {
+    padding: 1rem;
+  }
   &:hover {
     background-image: linear-gradient(
       to bottom right,
@@ -193,6 +201,7 @@ h2 {
   img {
     object-fit: cover;
     height: 175px;
+    width: 100%;
     border-radius: 25px 25px 0 0;
   }
   .new-badge {
@@ -270,6 +279,12 @@ h2 {
   border-radius: 20px 20px 0 0;
   margin-top: -30px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .menu {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
 .menu-list {
   display: flex;
@@ -378,14 +393,28 @@ h2 {
     }
   }
 }
+@media (min-width: 1024px) {
+  .menu-list {
+    flex-grow: 1;
+    flex-basis: 33%;
+  }
+}
 .nom-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   margin-right: 20px;
+  h2 {
+    font-family: "Shrikhand", cursive;
+  }
   i {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nom-menu {
+    flex-basis: 100%;
   }
 }
 .commander {
@@ -395,6 +424,11 @@ h2 {
   height: 170px;
   span {
     margin: 0 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .commander {
+    flex-basis: 100%;
   }
 }
 a {

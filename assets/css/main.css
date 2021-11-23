@@ -95,9 +95,20 @@ h2 {
 }
 
 .navbar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 50px;
   position: absolute;
-  top: 25px;
-  left: 20px;
+  top: 18px;
+  left: 2px;
   font-size: 1.5rem;
   color: black;
 }
@@ -128,6 +139,7 @@ h2 {
 
 .navbar--menu-image {
   height: 290px;
+  width: 100%;
 }
 
 .navbar--menu-image img {
@@ -175,10 +187,13 @@ h2 {
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  padding: 1rem;
   cursor: pointer;
   -webkit-box-shadow: 0px 5px 15px lightgrey;
           box-shadow: 0px 5px 15px lightgrey;
+}
+
+.main-button span {
+  padding: 1rem;
 }
 
 .main-button:hover {
@@ -306,6 +321,7 @@ h2 {
   -o-object-fit: cover;
      object-fit: cover;
   height: 175px;
+  width: 100%;
   border-radius: 25px 25px 0 0;
 }
 
@@ -426,6 +442,17 @@ h2 {
   border-radius: 20px 20px 0 0;
   margin-top: -30px;
   position: relative;
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .menu-list {
@@ -604,6 +631,16 @@ h2 {
           transform: rotate(360deg);
 }
 
+@media (min-width: 1024px) {
+  .menu-list {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
 .nom-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,8 +655,19 @@ h2 {
   margin-right: 20px;
 }
 
+.nom-menu h2 {
+  font-family: "Shrikhand", cursive;
+}
+
 .nom-menu i {
   font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .nom-menu {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .commander {
@@ -637,6 +685,13 @@ h2 {
 
 .commander span {
   margin: 0 30px;
+}
+
+@media (min-width: 1024px) {
+  .commander {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 a {
